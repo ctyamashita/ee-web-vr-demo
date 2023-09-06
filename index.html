@@ -1,5 +1,6 @@
 <html>
-  <head>
+
+<head>
     <!--   A-frame   -->
     <!--     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script> -->
     <!--   Nav mesh only works with 1.1.0 A-frame or lower   -->
@@ -10,10 +11,10 @@
     <!--     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script> -->
     <!--     <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script> -->
 
-<!--     <script src="https://unpkg.com/aframe-haptics-component/dist/aframe-haptics-component.min.js"></script> -->
+    <!--     <script src="https://unpkg.com/aframe-haptics-component/dist/aframe-haptics-component.min.js"></script> -->
 
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.0/dist/aframe-extras.min.js"></script>
-<!--     <script src="https://unpkg.com/super-hands@^3.0.1/dist/super-hands.min.js"></script> -->
+    <!--     <script src="https://unpkg.com/super-hands@^3.0.1/dist/super-hands.min.js"></script> -->
     <script src="https://unpkg.com/aframe-physics-extras/dist/aframe-physics-extras.min.js"></script>
     <script src="https://unpkg.com/super-hands/dist/super-hands.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.js"></script>
@@ -22,7 +23,7 @@
 
     <!--     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script> -->
 
-        <script src="https://unpkg.com/aframe-haptics-component/dist/aframe-haptics-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-haptics-component/dist/aframe-haptics-component.min.js"></script>
 
     <!--   Responsive Voice (Screen Reader)   -->
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=kC5hsy2f"></script>
@@ -37,7 +38,7 @@
     <script src="objects.js"></script>
     <script src="start-button.js"></script>
 
-<!--     <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script> -->
+    <!--     <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script> -->
 
     <!--     <script src="simple-navmesh-constraint.js" defer></script> -->
 
@@ -53,7 +54,7 @@
     <!--     <script src="https://cdn.jsdelivr.net/npm/opus-media-recorder@latest/encoderWorker.umd.js"></script> -->
 
     <!--     <script src="speech-recognition.js" defer></script> -->
-<!--         <script src="speech-recognition-wit.js" defer></script> -->
+    <!--         <script src="speech-recognition-wit.js" defer></script> -->
 
     <!--     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script> -->
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
@@ -63,431 +64,161 @@
     <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script> -->
 
     <!--     <script src="camrender.js"></script> -->
-  </head>
-  <body>
+</head>
+
+<body>
     <!--     inspector-plugin-recast -->
     <!--   physics="debug: true;"   -->
     <a-scene physics id="scene">
-      <!--       <a-entity camera="active: false" camrender="cid: cam2"
+        <!--       <a-entity camera="active: false" camrender="cid: cam2"
           position="0 15 0" rotation="-90 0 0">
       </a-entity> -->
 
-       <a-assets timeout="15000">
-        <a-asset-item
-          id="conference-room-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/conference-room-final-modified-3d-low.glb?v=1662478180608"
-        ></a-asset-item>
-        <a-asset-item
-          id="convinience-store-static-body-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/convinience-store-static-body.glb?v=1662377168364"
-        ></a-asset-item>
-        <a-asset-item
-          id="speech-stand-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/furniture-1.glb?v=1660802804949"
-        ></a-asset-item>
-        <a-asset-item
-          id="people-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/people.glb?v=1661515416195"
-        ></a-asset-item>
-        <a-asset-item
-          id="navmesh-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/conference-room-final-modified-3d-navmesh.glb?v=1662534459344"
-        ></a-asset-item>
-        <a-asset-item
-          id="pocky-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/pocky-2.glb?v=1662393834770"
-        ></a-asset-item>
-        <a-asset-item
-          id="pocky-boxes-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/pocky-boxes.glb?v=1662694526764"
-        ></a-asset-item>
-        <a-asset-item
-          id="kinoko-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/kinoko.glb?v=1662421195663"
-        ></a-asset-item>
-        <a-asset-item
-          id="kinoko-boxes-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/kinoko-boxes.glb?v=1662693949879"
-        ></a-asset-item>
-        <a-asset-item
-          id="onigiri-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/onigiri-new.glb?v=1663000864758"
-        ></a-asset-item>
-        <a-asset-item
-          id="onigiri-boxes-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/onigiri-boxes-new.glb?v=1663000874453"
-        ></a-asset-item>
-        <a-asset-item
-          id="jagariko-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/jagariko.glb?v=1662472054024"
-        ></a-asset-item>
-        <a-asset-item
-          id="jagariko-boxes-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/jagariko-boxes-3.glb?v=1662990700880"
-        ></a-asset-item>
-        <a-asset-item
-          id="wasabi-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/wasabi.glb?v=1662694956470"
-        ></a-asset-item>
-        <a-asset-item
-          id="wasabi-boxes-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/wasabi-boxes.glb?v=1662695035936"
-        ></a-asset-item>
-        <a-asset-item
-          id="vitamin-lemon-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/vitamin-lemon-fixed.glb?v=1662999212804"
-        ></a-asset-item>
-        <a-asset-item
-          id="vitamin-lemon-boxes-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/vitamin-lemon-boxes-2.glb?v=1662991015758"
-        ></a-asset-item>
-        <a-asset-item
-          id="natchan-orange-obj"
-          src="https://cdn.glitch.global/760dc4e7-1910-4152-80bb-be5580741edf/natchan-orange-500ml.glb?v=1666940186211"
-        ></a-asset-item>
-        <a-asset-item
-          id="natchan-apple-obj"
-          src="https://cdn.glitch.global/760dc4e7-1910-4152-80bb-be5580741edf/natchan-apple-500ml.glb?v=1667278628853"
-        ></a-asset-item>
+        <a-assets timeout="15000">
+            <a-asset-item id="conference-room-obj" src="/assets/3d-models/environment/conference-room-final-modified-3d-low.glb"></a-asset-item>
+            <a-asset-item id="speech-stand-obj" src="/assets/3d-models/environment/furniture-1.glb"></a-asset-item>
+            <a-asset-item id="people-obj" src="/assets/3d-models/environment/people.glb"></a-asset-item>
+            <a-asset-item id="navmesh-obj" src="/assets/3d-models/environment/conference-room-final-modified-3d-navmesh.glb"></a-asset-item>
+            <a-asset-item id="pocky-obj" src="/assets/3d-models/snacks/pocky-2.glb"></a-asset-item>
+            <a-asset-item id="pocky-boxes-obj" src="/assets/3d-models/snacks/pocky-boxes.glb"></a-asset-item>
+            <a-asset-item id="kinoko-obj" src="/assets/3d-models/snacks/kinoko.glb"></a-asset-item>
+            <a-asset-item id="kinoko-boxes-obj" src="/assets/3d-models/snacks/kinoko-boxes.glb"></a-asset-item>
+            <a-asset-item id="onigiri-obj" src="/assets/3d-models/snacks/onigiri-new.glb"></a-asset-item>
+            <a-asset-item id="onigiri-boxes-obj" src="/assets/3d-models/snacks/onigiri-boxes-new.glb"></a-asset-item>
+            <a-asset-item id="jagariko-obj" src="/assets/3d-models/snacks/jagariko.glb"></a-asset-item>
+            <a-asset-item id="jagariko-boxes-obj" src="/assets/3d-models/snacks/jagariko-boxes-3.glb"></a-asset-item>
+            <a-asset-item id="wasabi-obj" src="/assets/3d-models/snacks/wasabi.glb"></a-asset-item>
+            <a-asset-item id="wasabi-boxes-obj" src="/assets/3d-models/snacks/wasabi-boxes.glb"></a-asset-item>
+            <a-asset-item id="vitamin-lemon-obj" src="/assets/3d-models/drinks/vitamin-lemon-fixed.glb"></a-asset-item>
+            <a-asset-item id="vitamin-lemon-boxes-obj" src="/assets/3d-models/drinks/vitamin-lemon-boxes-2.glb"></a-asset-item>
+            <a-asset-item id="natchan-orange-obj" src="/assets/3d-models/drinks/natchan-orange-500ml.glb"></a-asset-item>
+            <a-asset-item id="natchan-apple-obj" src="/assets/3d-models/drinks/natchan-apple-500ml.glb"></a-asset-item>
 
-        <a-asset-item
-          id="natchan-grape-obj"
-          src="https://cdn.glitch.global/760dc4e7-1910-4152-80bb-be5580741edf/natchan-grape-500ml.glb?v=1667278692616"
-        ></a-asset-item>
-        <a-asset-item
-          id="ocha-obj"
-          src="https://cdn.glitch.global/760dc4e7-1910-4152-80bb-be5580741edf/1.5l-ocha-correct.glb?v=1667896492847"
-        ></a-asset-item>
-         <a-asset-item
-          id="aquarius-obj"
-          src="https://cdn.glitch.global/760dc4e7-1910-4152-80bb-be5580741edf/aquarius-2l.glb?v=1667280285138"
-        ></a-asset-item>
-         <a-asset-item
-          id="water-obj"
-          src="https://cdn.glitch.global/760dc4e7-1910-4152-80bb-be5580741edf/water-2l.glb?v=1667280294263"
-        ></a-asset-item>
+            <a-asset-item id="natchan-grape-obj" src="/assets/3d-models/drinks/natchan-grape-500ml.glb"></a-asset-item>
+            <a-asset-item id="ocha-obj" src="/assets/3d-models/drinks/1.5l-ocha-correct.glb"></a-asset-item>
+            <a-asset-item id="aquarius-obj" src="/assets/3d-models/drinks/aquarius-2l.glb"></a-asset-item>
+            <a-asset-item id="water-obj" src="/assets/3d-models/drinks/water-2l.glb"></a-asset-item>
 
-        <a-asset-item
-          id="radio-obj"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/radio.glb?v=1662480586236"
-        ></a-asset-item>
-        <img
-          id="ee-logo"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/EE-Logo-Blue-Transparent.png?v=1662461711938"
-          crossorigin="anonymous"
-        />
-        <img
-          id="mini-map-img"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/mini-map.png?v=1662647154720"
-          crossorigin="anonymous"
-        />
-        <audio
-          id="conference-room-sound"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/crowd-talking-4%20(mp3cut.net)%20(1).mp3?v=1661512964119"
-          preload="auto"
-        ></audio>
-        <audio
-          id="konbini-sound"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/familymart_chime%20(mp3cut.net).mp3?v=1662476642763"
-          preload="auto"
-        ></audio>
-        <audio
-          id="radio-sound"
-          src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/Light-Piano-Lofi-Beat-No-Copyrig.mp3?v=1662480207359"
-          preload="auto"
-        ></audio>
-        <!--         <audio id="step-sound" src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/app_sounds_steps%20(1).wav?v=1662294403464" preload="auto"></audio> -->
-<!--         <canvas id="cam2"></canvas> -->
+            <a-asset-item id="radio-obj" src="/assets/3d-models/environment/radio.glb"></a-asset-item>
+            <img id="ee-logo" src="/assets/images/EE-Logo-Blue-Transparent.png" crossorigin="anonymous" />
+            <img id="mini-map-img" src="/assets/images/mini-map.png" crossorigin="anonymous" />
+            <audio id="conference-room-sound" src="/assets/audio/crowd-talking-4.mp3" preload="auto"></audio>
+            <audio id="konbini-sound" src="/assets/audio/familymart_chime.mp3" preload="auto"></audio>
+            <audio id="radio-sound" src="/assets/audio/Light-Piano-Lofi-Beat-No-Copyrig.mp3" preload="auto"></audio>
+            <!--         <audio id="step-sound" src="https://cdn.glitch.global/3cd589f5-b029-4cde-9f12-b857ebb581e5/app_sounds_steps%20(1).wav?v=1662294403464" preload="auto"></audio> -->
+            <!--         <canvas id="cam2"></canvas> -->
 
-        <a-mixin id="grab-move"
-                 hoverable grabbable draggable
-                 event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
-                 event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
-                 body="type: dynamic; shape: box"
-        ></a-mixin>
+            <a-mixin id="grab-move" hoverable grabbable draggable event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true" event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false" body="type: dynamic; shape: box"></a-mixin>
 
-<!--         <a-mixin id="grab-move"
+            <!--         <a-mixin id="grab-move"
                  hoverable grabbable draggable
                  event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
                  event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
                  dynamic-body="shape: box"
         ></a-mixin> -->
 
-        <a-mixin id="physics-hands"
-                 physics-collider phase-shift
-                 collision-filter="collisionForces: false"
-                 static-body="shape: sphere; sphereRadius: 0.02"
-                 super-hands="colliderEvent: collisions;
+            <a-mixin id="physics-hands" physics-collider phase-shift collision-filter="collisionForces: false" static-body="shape: sphere; sphereRadius: 0.02" super-hands="colliderEvent: collisions;
                               colliderEventProperty: els;
                               colliderEndEvent: collisions;
-                              colliderEndEventProperty: clearedEls;"
-        ></a-mixin>
-      </a-assets>
-      <!--      camera -->
-      <a-entity
-        id="cameraRig"
-        movement-controls="speed: 0.06; constrainToNavMesh: true; enabled: false"
-        position="5 0 -10"
-        walk-sound
-      >
-         <!--       mouse -->
-      <a-entity
-        id="mouse"
-        cursor="ray-origin: mouse"
-        raycaster="objects: .clickable; far: 12"
-      ></a-entity>
+                              colliderEndEventProperty: clearedEls;"></a-mixin>
+        </a-assets>
+        <!--      camera -->
+        <a-entity id="cameraRig" movement-controls="speed: 0.06; constrainToNavMesh: true; enabled: false" position="5 0 -10" walk-sound>
+            <!--       mouse -->
+            <a-entity id="mouse" cursor="ray-origin: mouse" raycaster="objects: .clickable; far: 12"></a-entity>
 
-        <a-entity
-          camera="active: true"
-          position="0 1.5 0"
-          look-controls
-          id="camera"
-        >
-          <!--          camera mini-map -->
-          <!--         <a-plane position="0 0 -1" rotation="0 0 0" width=".4" height=".3"
+            <a-entity camera="active: true" position="0 1.5 0" look-controls id="camera">
+                <!--          camera mini-map -->
+                <!--         <a-plane position="0 0 -1" rotation="0 0 0" width=".4" height=".3"
           material="src:#cam2; opacity: .95" canvas-updater visible="false" id="mini-map"></a-plane> -->
 
-          <!--           camera cursor -->
-          <!--           <a-cursor raycaster="objects: .clickable"></a-cursor> -->
-  	      <a-entity cursor
-                    raycaster="objects: .clickable"
-                    position="0 0 -0.02"
-                    geometry="primitive:sphere; radius: 0.0002"
-                    material="color: black; shader: flat; opacity: 0.5"
-                    id="camera-cursor"
-                    >
-          </a-entity>
+                <!--           camera cursor -->
+                <!--           <a-cursor raycaster="objects: .clickable"></a-cursor> -->
+                <a-entity cursor raycaster="objects: .clickable" position="0 0 -0.02" geometry="primitive:sphere; radius: 0.0002" material="color: black; shader: flat; opacity: 0.5" id="camera-cursor">
+                </a-entity>
 
-          <!-- img mini-map -->
-          <a-plane
-            position="0 0 -.5"
-            width=".6"
-            height=".75"
-            material="src:#mini-map-img;"
-            visible="false"
-            id="mini-map-camera"
-          ></a-plane>
+                <!-- img mini-map -->
+                <a-plane position="0 0 -.5" width=".6" height=".75" material="src:#mini-map-img;" visible="false" id="mini-map-camera"></a-plane>
 
-          <a-entity id="arrow" visible="false">
-            <a-entity geometry="primitive: cone; height: .01; radiusBottom: 0; radiusTop: .01"
-                      material="color: red; shader: flat"
-                      position="0 -.08 -.2"
-            ></a-entity>
-          </a-entity>
+                <a-entity id="arrow" visible="false">
+                    <a-entity geometry="primitive: cone; height: .01; radiusBottom: 0; radiusTop: .01" material="color: red; shader: flat" position="0 -.08 -.2"></a-entity>
+                </a-entity>
 
-          <!--           caption -->
-          <a-entity
-            geometry="primitive: plane; height: .1; width: 1"
-            material="color:#222; shader:flat"
-            position="0 0 -0.3"
-            id="panel-caption"
-            scale="0.4 0.4 0.4"
-            visible="false"
-          >
-            <a-text
-              value="Use the left thumbstick to move around."
-              scale=".2 .2 .2"
-              id="caption"
-              align="center"
-              color="#eee"
-              position="0 0 0.01"
-            >
-            </a-text>
-          </a-entity>
+                <!--           caption -->
+                <a-entity geometry="primitive: plane; height: .1; width: 1" material="color:#222; shader:flat" position="0 0 -0.3" id="panel-caption" scale="0.4 0.4 0.4" visible="false">
+                    <a-text value="Use the left thumbstick to move around." scale=".2 .2 .2" id="caption" align="center" color="#eee" position="0 0 0.01">
+                    </a-text>
+                </a-entity>
+            </a-entity>
+            <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .clickable; far: 12; enabled: false; showLine: false" hand-controls="hand: left" static-body="shape: sphere; sphereRadius: 0.02" left-controller mixin="physics-hands" haptics="events: collisions; dur: 100; force: 0.5"></a-entity>
+            <a-entity id="rightHand" right-controller laser-controls="hand: right" raycaster="objects: .clickable; far: 12; enabled: false; showLine: false" hand-controls="hand: right" mixin="physics-hands" haptics="events: collisions; dur: 100; force: 0.5">
+                <!-- img mini-map hand -->
+                <a-plane position="-0.3 0.3 -.1" rotation="-15 0 0" width=".6" height=".75" material="src:#mini-map-img;" visible="false" id="mini-map"></a-plane>
+            </a-entity>
         </a-entity>
-        <a-entity
-          id="leftHand"
-          laser-controls="hand: left"
-          raycaster="objects: .clickable; far: 12; enabled: false; showLine: false"
-          hand-controls="hand: left"
-          static-body="shape: sphere; sphereRadius: 0.02"
-          left-controller
-          mixin="physics-hands"
-          haptics="events: collisions; dur: 100; force: 0.5"
-        ></a-entity>
-        <a-entity
-          id="rightHand"
-          right-controller
-          laser-controls="hand: right"
-          raycaster="objects: .clickable; far: 12; enabled: false; showLine: false"
-          hand-controls="hand: right"
-          mixin="physics-hands"
-          haptics="events: collisions; dur: 100; force: 0.5"
-        >
-          <!-- img mini-map hand -->
-          <a-plane
-            position="-0.3 0.3 -.1"
-            rotation="-15 0 0"
-            width=".6"
-            height=".75"
-            material="src:#mini-map-img;"
-            visible="false"
-            id="mini-map"
-          ></a-plane>
+
+
+        <!--     targets -->
+        <a-entity position="-2 0 -12" rotation="0 -160 0" gltf-model="#speech-stand-obj" target="label: Speaker Podium; labelZ: 0; labelY: 2; labelX:0; destinationZ: -.4; destinationY: 1.7; destinationX:1.2">
         </a-entity>
-      </a-entity>
+
+        <a-entity position="-4 0.1 -6" rotation="0 90 0" gltf-model="#people-obj" class="sound" sound="src: #conference-room-sound; loop: true; volume: 2;" target="label: Audience; labelZ: 1.5; labelY: 1; labelX:0; destinationZ: 0; destinationY: 2; destinationX: 1">
+        </a-entity>
+
+        <a-entity position="-.1 2.84 -8.54" rotation="0 90 0" geometry="primitive: box; width: 6; height: 3.2; depth:.1;" material="visible: false" target="label: Screen; labelZ: 1; labelY: 0; labelX:0; destination: false">
+        </a-entity>
+
+        <a-entity geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2" material="visible: false" position="-0.8 1.1 -2.45" rotation="0 0 0" target="label: Conference Room Entrance; labelY: 1">
+        </a-entity>
+
+        <a-entity geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2" material="visible: false" position="0 1.1 7" rotation="0 180 0" target="label: VR Research Event Entrance; labelY: 1">
+        </a-entity>
+
+        <a-entity geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2" material="visible: false" position="3.7 1.1 5.5" rotation="0 180 0" target="label: Lounge; labelY: 1">
+        </a-entity>
+
+        <a-entity geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2" material="visible: false" position="1.38 1.1 1.7" rotation="0 0 0" target="label: Convenience Store Entrance; labelY: 1" sound="src: #konbini-sound; volume: .5">
+        </a-entity>
+
+        <a-entity geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2" material="visible: false" position="3 1.1 -7.5" rotation="0 0 0" target="label: Drinks Shelf; labelY: 1">
+        </a-entity>
+
+        <a-entity geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2" material="visible: false" position="5.7 1.1 -7.5" rotation="0 0 0" target="label: Snacks Shelf; labelY: 1">
+        </a-entity>
+
+        <!--       shelves -->
+
+        <!-- top shelf -->
+        <a-entity static-body position="2.97 1.32 -8.2" geometry="primitive: box; height: .07; width: 2; depth: .4" visible="false"></a-entity>
+
+        <a-entity static-body position="5 1.35 -8.05" gltf-model="#wasabi-boxes-obj">
+        </a-entity>
+
+        <a-entity static-body position="6.1 1.35 -8.05" gltf-model="#jagariko-boxes-obj">
+        </a-entity>
+        <!--       middle shelf -->
+        <a-entity static-body position="2.97 .95 -8.2" geometry="primitive: box; height: .07; width: 2; depth: .4" visible="false"></a-entity>
+
+        <a-entity static-body position="5 .98 -8.1" gltf-model="#kinoko-boxes-obj">
+        </a-entity>
+
+        <a-entity static-body position="6 .98 -8.1" gltf-model="#pocky-boxes-obj">
+        </a-entity>
+
+        <!-- lower shelf -->
+        <a-entity static-body position="2.97 .565 -8.2" geometry="primitive: box; height: .07; width: 2; depth: .4" visible="false"></a-entity>
+
+        <a-entity static-body position="5 0.6 -8.05" gltf-model="#onigiri-boxes-obj">
+        </a-entity>
+
+        <a-entity static-body position="6 0.6 -8.05" gltf-model="#vitamin-lemon-boxes-obj">
+        </a-entity>
 
 
-      <!--     targets -->
-      <a-entity
-        position="-2 0 -12"
-        rotation="0 -160 0"
-        gltf-model="#speech-stand-obj"
-        target="label: Speaker Podium; labelZ: 0; labelY: 2; labelX:0; destinationZ: -.4; destinationY: 1.7; destinationX:1.2"
-      >
-      </a-entity>
+        <!-- top shelf -->
+        <a-entity static-body position="5.95 1.32 -8.2" geometry="primitive: box; height: .07; width: 2; depth: .4" visible="false"></a-entity>
 
-      <a-entity
-        position="-4 0.1 -6"
-        rotation="0 90 0"
-        gltf-model="#people-obj"
-        class="sound"
-        sound="src: #conference-room-sound; loop: true; volume: 2;"
-        target="label: Audience; labelZ: 1.5; labelY: 1; labelX:0; destinationZ: 0; destinationY: 2; destinationX: 1"
-      >
-      </a-entity>
-
-       <a-entity
-        position="-.1 2.84 -8.54"
-        rotation="0 90 0"
-        geometry="primitive: box; width: 6; height: 3.2; depth:.1;"
-        material="visible: false"
-        target="label: Screen; labelZ: 1; labelY: 0; labelX:0; destination: false"
-      >
-      </a-entity>
-
-      <a-entity
-        geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2"
-        material="visible: false"
-        position="-0.8 1.1 -2.45"
-        rotation="0 0 0"
-        target="label: Conference Room Entrance; labelY: 1"
-      >
-      </a-entity>
-
-      <a-entity
-        geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2"
-        material="visible: false"
-        position="0 1.1 7"
-        rotation="0 180 0"
-        target="label: VR Research Event Entrance; labelY: 1"
-      >
-      </a-entity>
-
-      <a-entity
-        geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2"
-        material="visible: false"
-        position="3.7 1.1 5.5"
-        rotation="0 180 0"
-        target="label: Lounge; labelY: 1"
-      >
-      </a-entity>
-
-      <a-entity
-        geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2"
-        material="visible: false"
-        position="1.38 1.1 1.7"
-        rotation="0 0 0"
-        target="label: Convenience Store Entrance; labelY: 1"
-        sound="src: #konbini-sound; volume: .5"
-      >
-      </a-entity>
-
-      <a-entity
-        geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2"
-        material="visible: false"
-        position="3 1.1 -7.5"
-        rotation="0 0 0"
-        target="label: Drinks Shelf; labelY: 1"
-      >
-      </a-entity>
-
-      <a-entity
-        geometry="primitive: box; height: 2.1; width: 1.2, depth: 1.2"
-        material="visible: false"
-        position="5.7 1.1 -7.5"
-        rotation="0 0 0"
-        target="label: Snacks Shelf; labelY: 1"
-      >
-      </a-entity>
-
-<!--       shelves -->
-
-<!-- top shelf -->
-      <a-entity
-        static-body
-        position="2.97 1.32 -8.2"
-        geometry="primitive: box; height: .07; width: 2; depth: .4"
-        visible="false"
-      ></a-entity>
-
-      <a-entity
-        static-body
-        position="5 1.35 -8.05"
-        gltf-model="#wasabi-boxes-obj"
-      >
-      </a-entity>
-
-      <a-entity
-        static-body
-        position="6.1 1.35 -8.05"
-        gltf-model="#jagariko-boxes-obj"
-      >
-      </a-entity>
-<!--       middle shelf -->
-      <a-entity
-        static-body
-        position="2.97 .95 -8.2"
-        geometry="primitive: box; height: .07; width: 2; depth: .4"
-        visible="false"
-      ></a-entity>
-
-      <a-entity
-        static-body
-        position="5 .98 -8.1"
-        gltf-model="#kinoko-boxes-obj"
-      >
-      </a-entity>
-
-       <a-entity
-        static-body
-        position="6 .98 -8.1"
-        gltf-model="#pocky-boxes-obj"
-      >
-      </a-entity>
-
-<!-- lower shelf -->
-      <a-entity
-        static-body
-        position="2.97 .565 -8.2"
-        geometry="primitive: box; height: .07; width: 2; depth: .4"
-        visible="false"
-      ></a-entity>
-
-      <a-entity
-        static-body
-        position="5 0.6 -8.05"
-        gltf-model="#onigiri-boxes-obj"
-      >
-      </a-entity>
-
-      <a-entity
-        static-body
-        position="6 0.6 -8.05"
-        gltf-model="#vitamin-lemon-boxes-obj"
-      >
-      </a-entity>
-
-
-<!-- top shelf -->
-      <a-entity
-        static-body
-        position="5.95 1.32 -8.2"
-        geometry="primitive: box; height: .07; width: 2; depth: .4"
-        visible="false"
-      ></a-entity>
-
-<!--        <a-entity
+        <!--        <a-entity
         static-body
         position="2.1 1.35 -8.05"
         gltf-model="#wasabi-boxes-obj"
@@ -501,37 +232,27 @@
       >
       </a-entity> -->
 
-<!--       middle shelf -->
-<!--       <a-entity
+        <!--       middle shelf -->
+        <!--       <a-entity
         static-body
         position="2.2 .98 -8.1"
         gltf-model="#kinoko-boxes-obj"
       >
       </a-entity> -->
 
-<!--       <a-entity
+        <!--       <a-entity
         static-body
         position="3.2 .98 -8.1"
         gltf-model="#pocky-boxes-obj"
       >
       </a-entity> -->
 
-      <a-entity
-        static-body
-        position="5.95 .95 -8.2"
-        geometry="primitive: box; height: .07; width: 2; depth: .4"
-        visible="false"
-      ></a-entity>
+        <a-entity static-body position="5.95 .95 -8.2" geometry="primitive: box; height: .07; width: 2; depth: .4" visible="false"></a-entity>
 
-<!-- lower shelf -->
-      <a-entity
-        static-body
-        position="5.95 .565 -8.2"
-        geometry="primitive: box; height: .07; width: 2; depth: .4"
-        visible="false"
-      ></a-entity>
+        <!-- lower shelf -->
+        <a-entity static-body position="5.95 .565 -8.2" geometry="primitive: box; height: .07; width: 2; depth: .4" visible="false"></a-entity>
 
-<!--        <a-entity
+        <!--        <a-entity
         static-body
         position="2.2 0.6 -8.05"
         gltf-model="#onigiri-boxes-obj"
@@ -545,97 +266,47 @@
       >
       </a-entity> -->
 
-      <!--       floor -->
-      <a-entity
-        static-body
-        position="0 0 0"
-        rotation="-90 00 0"
-        geometry="primitive: plane; width: 50; height: 50"
-        visible="false"
-      ></a-entity>
+        <!--       floor -->
+        <a-entity static-body position="0 0 0" rotation="-90 00 0" geometry="primitive: plane; width: 50; height: 50" visible="false"></a-entity>
 
-      <a-plane
-        static-body
-        position="5 2.15 -8.360"
-        height="5.2"
-        width="8"
-        visible="false"
-      ></a-plane>
+        <a-plane static-body position="5 2.15 -8.360" height="5.2" width="8" visible="false"></a-plane>
 
-      <a-entity
-        position="0 0 6"
-        rotation="0 90 0"
-        gltf-model="#conference-room-obj"
-        class="clickable"
-      >
-      </a-entity>
+        <a-entity position="0 0 6" rotation="0 90 0" gltf-model="#conference-room-obj" class="clickable">
+        </a-entity>
 
-      <!--       objects -->
+        <!--       objects -->
 
-      <a-entity
-        gltf-model="#radio-obj"
-        position="4.8 .7 6.5"
-        rotation="0 210 0"
-        sound="src:#radio-sound; loop: true; volume:.5; refDistance:.5"
-        class="sound"
-      ></a-entity>
-      <!--    food station    -->
-      <!--       left shelves -->
-       <a-entity
-        mixin="grab-move"
-        sleepy
-        position="2.8 1.70 -8.1"
-        class="pickable"
-        gltf-model="#natchan-orange-obj"
-        object="label: Suntory Natchan Orange;
+        <a-entity gltf-model="#radio-obj" position="4.8 .7 6.5" rotation="0 210 0" sound="src:#radio-sound; loop: true; volume:.5; refDistance:.5" class="sound"></a-entity>
+        <!--    food station    -->
+        <!--       left shelves -->
+        <a-entity mixin="grab-move" sleepy position="2.8 1.70 -8.1" class="pickable" gltf-model="#natchan-orange-obj" object="label: Suntory Natchan Orange;
                 backLabel: A blend of fruit juice using Valencia orange, which has a fresh flavor, and mandarin orange, which is similar to the mandarin oranges that are familiar to Japanese people, is used to achieve both ease of drinking and reduced sourness and bitterness. Popular with a wide range of ages, from children to adults! No preservatives, colorings, artificial sweeteners, pure water made Natchan.;
                 dimensions: 2.25 x 8 inches;
                 weight: 16 oz;
                 price: $4.20;
                 labelY: -0.07;
-                labelZ: .15;"
-      >
-      </a-entity>
+                labelZ: .15;">
+        </a-entity>
 
-      <a-entity
-        mixin="grab-move"
-        sleepy
-        position="3 1.7 -8.1"
-        class="pickable"
-        gltf-model="#natchan-apple-obj"
-        object="label: Suntory Natchan Apple;
+        <a-entity mixin="grab-move" sleepy position="3 1.7 -8.1" class="pickable" gltf-model="#natchan-apple-obj" object="label: Suntory Natchan Apple;
                 backLabel: It features a gentle taste and a refreshing aftertaste, just like freshly cut apple fruits. Popular with a wide range of ages, from children to adults! No preservatives, coloring, artificial sweeteners, pure water made Natchan.;
                 dimensions: 2.25 x 8 inches;
                 weight: 16 oz;
                 price: $4.20;
                 labelY: -0.07;
-                labelZ: 0.15;"
-      >
-      </a-entity>
+                labelZ: 0.15;">
+        </a-entity>
 
-      <a-entity
-        mixin="grab-move"
-        sleepy
-        position="2.8 1.2 -8.1"
-        class="pickable"
-        gltf-model="#natchan-grape-obj"
-        object="label: Suntory Natchan Grape;
+        <a-entity mixin="grab-move" sleepy position="2.8 1.2 -8.1" class="pickable" gltf-model="#natchan-grape-obj" object="label: Suntory Natchan Grape;
                 backLabel: Suppressing the astringency, it has a refreshing, yet satisfying and luxurious taste. Popular with a wide range of ages, from children to adults! No preservatives, coloring, artificial sweeteners, pure water made Natchan.;
                 dimensions: 2.25 x 8 inches;
                 weight: 16 oz;
                 price: $4.20;
                 labelY: -0.07;
-                labelZ: 0.15;"
-      >
-      </a-entity>
+                labelZ: 0.15;">
+        </a-entity>
 
-      <a-entity
-        position="3 1.25 -8.1"
-        sleepy
-        class="pickable"
-        gltf-model="#ocha-obj"
-        mixin="grab-move"
-        object="label: Ocha Green Tea;
+        <a-entity position="3 1.25 -8.1" sleepy class="pickable" gltf-model="#ocha-obj" mixin="grab-move" object="label: Ocha Green Tea;
                 backLabel: Ocha is the word used
                 in Japan for green tea.
                 It is produced by picking
@@ -644,64 +315,38 @@
                 weight: 50.72 oz;
                 price: $5.99;
                 labelY: -0.07;
-                labelZ: 0.15;"
-      >
-      </a-entity>
+                labelZ: 0.15;">
+        </a-entity>
 
-      <a-entity
-        mixin="grab-move"
-        sleepy
-        position="2.8 0.8 -8.1"
-        class="pickable"
-        gltf-model="#aquarius-obj"
-        object="label: Aquarius;
+        <a-entity mixin="grab-move" sleepy position="2.8 0.8 -8.1" class="pickable" gltf-model="#aquarius-obj" object="label: Aquarius;
                 backLabel: An isotonic drink that hydrates and supplies electrolytes to the body. It is a great-tasting, functional water drink that couples simple hydration with essential mineral intake to refresh your body and mind.;
                 dimensions: 4.33 x 12.4 inches;
                 weight: 67.63 oz;
                 price: $6.89;
                 labelY: -0.07;
-                labelZ: 0.15;"
-      >
-      </a-entity>
+                labelZ: 0.15;">
+        </a-entity>
 
-      <a-entity
-        mixin="grab-move"
-        sleepy
-        position="3 0.8 -8.15"
-        class="pickable"
-        gltf-model="#water-obj"
-        object="label: Irohasu;
+        <a-entity mixin="grab-move" sleepy position="3 0.8 -8.15" class="pickable" gltf-model="#water-obj" object="label: Irohasu;
                 backLabel: Irohasu is Coca-Cola Japan's brand of still water. The name is a combination of the first three characters of the ancient Japanese poem 'Iroha' and 'LOHAS', a keyword which focuses on health and the environment.;
                 dimensions: 4.33 x 12.4 inches;
                 weight: 67.63 oz;
                 price: $2.50;
                 labelY: -0.07;
-                labelZ: 0.15;"
-      >
-      </a-entity>
+                labelZ: 0.15;">
+        </a-entity>
 
-      <!--       right shelves -->
-            <a-entity
-        mixin="grab-move"
-        position="5.72 1.4 -8.32"
-        class="pickable"
-        gltf-model="#wasabi-obj"
-        object="label: Wasabi Kaki no Tane;
+        <!--       right shelves -->
+        <a-entity mixin="grab-move" position="5.72 1.4 -8.32" class="pickable" gltf-model="#wasabi-obj" object="label: Wasabi Kaki no Tane;
                 labelY: -0.07;
                 labelZ: 0.15;
                 backLabel: Kakinotane is a mix of crescent-shaped rice crackers and peanuts. The spicy wasabi seasoning leaves you with that classic wasabi tingle in the back of your nose, without overpowering the delicious umami of the soy sauce crackers.;
                 dimensions: 9.69 x 7.64 x 3.4 inches;
                 weight: 4.5 oz;
-                price: $6.50"
-      >
-      </a-entity>
+                price: $6.50">
+        </a-entity>
 
-      <a-entity
-        mixin="grab-move"
-        position="5.9 1.4 -8.1"
-        class="pickable"
-        gltf-model="#jagariko-obj"
-        object="label: Jagariko;
+        <a-entity mixin="grab-move" position="5.9 1.4 -8.1" class="pickable" gltf-model="#jagariko-obj" object="label: Jagariko;
                 labelY: -0.07;
                 labelZ: 0.15;
                 backLabel: A family of salty snack products
@@ -709,31 +354,19 @@
                 fried potatoes.;
                 weight: 2.11 oz;
                 dimensions: 0.28 x 2.8 inches;
-                price: $2.50"
-      >
-      </a-entity>
+                price: $2.50">
+        </a-entity>
 
-      <a-entity
-        mixin="grab-move"
-        position="5.6 1 -8.1"
-        class="pickable"
-        gltf-model="#kinoko-obj"
-        object="label: Kinoko no Yama;
+        <a-entity mixin="grab-move" position="5.6 1 -8.1" class="pickable" gltf-model="#kinoko-obj" object="label: Kinoko no Yama;
                 labelY: -0.07;
                 labelZ: 0.15;
                 backLabel: It is made in the shape of little mushrooms. Kinoko means 'mushroom' and yama means 'mountain'. The 'stem' of the mushroom is made of a biscuit-type cookie and the top is made of chocolate.;
                 dimensions: 6 x 3.5 x 1 inch;
                 weight: 2.61 oz;
-                price: $3.29"
-      >
-      </a-entity>
+                price: $3.29">
+        </a-entity>
 
-      <a-entity
-        mixin="grab-move"
-        position="5.8 1 -8.1"
-        class="pickable"
-        gltf-model="#pocky-obj"
-        object="label: Pocky;
+        <a-entity mixin="grab-move" position="5.8 1 -8.1" class="pickable" gltf-model="#pocky-obj" object="label: Pocky;
                 labelY: -0.07;
                 labelZ: 0.15;
                 backLabel: Chocolate coated cookie sticks.
@@ -741,16 +374,10 @@
                 which is supposed to resemble the sound of the snack being cracked.;
                 dimensions: 5 x 4 x 6 inches;
                 weight: 2.47 oz;
-                price: $2.19"
-      >
-      </a-entity>
+                price: $2.19">
+        </a-entity>
 
-      <a-entity
-        mixin="grab-move"
-        position="5.6 0.7 -8.1"
-        class="pickable"
-        gltf-model="#onigiri-obj"
-        object="label: Tuna Mayo Onigiri;
+        <a-entity mixin="grab-move" position="5.6 0.7 -8.1" class="pickable" gltf-model="#onigiri-obj" object="label: Tuna Mayo Onigiri;
                 labelY: -0.07;
                 labelZ: 0.15;
                 backLabel: A modern take on traditional Japanese rice balls.
@@ -758,16 +385,10 @@
                 with Japanese-style mayonnaise and soy sauce.;
                 weight: 3.88 oz;
                 dimensions: 2.75 x 2.75 x 1.18 inches;
-                price: $2.50"
-      >
-      </a-entity>
+                price: $2.50">
+        </a-entity>
 
-      <a-entity
-        mixin="grab-move"
-        position="5.8 0.7 -8.15"
-        class="pickable"
-        gltf-model="#vitamin-lemon-obj"
-        object="label: Vitamin Lemon;
+        <a-entity mixin="grab-move" position="5.8 0.7 -8.15" class="pickable" gltf-model="#vitamin-lemon-obj" object="label: Vitamin Lemon;
                 labelY: -0.07;
                 labelZ: 0.15;
                 backLabel: Refreshing lemon jelly.
@@ -775,74 +396,32 @@
                 50 lemon pieces (1000 mg);
                 dimensions: 3.15 x 4.9 x 1.38 inches;
                 weight: 6.3 oz;
-                price: $5.59"
-      >
-      </a-entity>
+                price: $5.59">
+        </a-entity>
 
-      <!--    navmesh    -->
+        <!--    navmesh    -->
 
-      <a-entity
-        gltf-model="#navmesh-obj"
-        nav-mesh
-        visible="false"
-        position="0 0 6"
-        rotation="0 90 0"
-        id="navmesh"
-      >
-      </a-entity>
+        <a-entity gltf-model="#navmesh-obj" nav-mesh visible="false" position="0 0 6" rotation="0 90 0" id="navmesh">
+        </a-entity>
 
-      <!--    title screen    -->
+        <!--    title screen    -->
 
-      <a-plane
-        position="5 2.6 -15"
-        rotation="0 0 0"
-        height="5.2"
-        width="8"
-        class="clickable"
-        color="black"
-      >
-        <a-image src="#ee-logo" width="2.5" position="0 2 .01"> </a-image>
-        <a-text
-          value="Study Overview"
-          align="center"
-          position="0 .8 .01"
-          scale="2 2 2"
-        >
-        </a-text>
-        <a-text
-          value="Equal Entry created several interactive samples for you to try with respect to your 3D description preferences. Your data will be collected and published for other people to learn from."
-          wrap-count="30"
-          position="0 -0.5 0.01"
-          align="center"
-        >
-        </a-text>
-        <a-plane
-          height=".7"
-          width="3.5"
-          position="0 -1.95 0.01"
-          color="#00FF00"
-          class="clickable"
-          start-button
-        >
-          <a-text
-            value="Press the trigger to participate"
-            align="center"
-            position="0 0 .01"
-          ></a-text>
-          <a-sphere radius="1.5"
-                    position="0 1 4.5"
-                    material="side:back; opacity:0"
-                    class="clickable"
-                    ></a-sphere>
+        <a-plane position="5 2.6 -15" rotation="0 0 0" height="5.2" width="8" class="clickable" color="black">
+            <a-image src="#ee-logo" width="2.5" position="0 2 .01"> </a-image>
+            <a-text value="Study Overview" align="center" position="0 .8 .01" scale="2 2 2">
+            </a-text>
+            <a-text value="Equal Entry created several interactive samples for you to try with respect to your 3D description preferences. Your data will be collected and published for other people to learn from." wrap-count="30" position="0 -0.5 0.01" align="center">
+            </a-text>
+            <a-plane height=".7" width="3.5" position="0 -1.95 0.01" color="#00FF00" class="clickable" start-button>
+                <a-text value="Press the trigger to participate" align="center" position="0 0 .01"></a-text>
+                <a-sphere radius="1.5" position="0 1 4.5" material="side:back; opacity:0" class="clickable"></a-sphere>
+            </a-plane>
         </a-plane>
-      </a-plane>
 
-      <a-entity
-        environment="preset: forest; dressingAmount: 0"
-        position="0 0 -2"
-      ></a-entity>
+        <a-entity environment="preset: forest; dressingAmount: 0" position="0 0 -2"></a-entity>
     </a-scene>
 
 
-  </body>
+</body>
+
 </html>
